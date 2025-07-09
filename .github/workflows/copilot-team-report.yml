@@ -1,9 +1,9 @@
 name: Copilot Billing Export
 
 on:
-  workflow_dispatch: # Manual trigger
+  workflow_dispatch:
   # schedule:
-  #   - cron: '0 2 * * *' # Runs daily at 2am UTC (optional, edit/remove as needed)
+  #   - cron: '0 2 * * *' # Runs daily at 2am UTC (optional)
 
 jobs:
   export-copilot-billing:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11' # Or your preferred version
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
