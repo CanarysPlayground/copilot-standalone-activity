@@ -114,8 +114,8 @@ def main():
     if not output_data:
         print("⚠️ No data to write to CSV")
     else:
-        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        csv_file_name = f"teams_{timestamp}.csv"
+        # Write to a fixed name for workflow artifact upload
+        csv_file_name = "copilot_billing_seats.csv"
         fieldnames = [
             'enterprise_name', 'team_name', 'user_name', 'Email', 'Created At',
             'Last Activity At', 'Last Active Editor', 'Editor Version',
