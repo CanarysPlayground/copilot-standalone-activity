@@ -27,7 +27,7 @@ jobs:
           ENTERPRISE_SLUG: ${{ secrets.ENTERPRISE_SLUG }}
           AUTH_TOKEN: ${{ secrets.REPORTS_PAT }}
         run: |
-          python copilot_billing.py
+          python team.py
 
       - name: Upload billing CSV artifact
         uses: actions/upload-artifact@v4
