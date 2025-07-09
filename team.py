@@ -5,7 +5,7 @@ from datetime import datetime
 
 # Get enterprise slug from environment variable
 ENTERPRISE_SLUG = os.getenv('ENTERPRISE_SLUG')  # Set your enterprise slug here
-AUTH_TOKEN = os.environ.get('GH_ADMIN_TOKEN')
+AUTH_TOKEN = os.getenv('AUTH_TOKEN')  # Set your auth token here
 
 if not ENTERPRISE_SLUG:
     raise ValueError("ENTERPRISE_SLUG environment variable must be set")
